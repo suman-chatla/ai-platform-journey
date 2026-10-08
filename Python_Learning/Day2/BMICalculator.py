@@ -3,5 +3,13 @@ height = float(input("Enter your height in meters: "))
 
 bmi = weight/ (height **2)
 
-print(f"your bmi is {bmi:.2f}")
+if bmi < 18.5:
+    category = "Underweight"
+elif 18.5 <= bmi < 25:
+    category = "Normal weight"
+elif 25 <= bmi < 30:
+    category = "Overweight"
+else:
+    category = "Obese"
 
+print(f"your bmi is {bmi:.2f} and you are {category}")
